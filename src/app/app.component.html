@@ -5,9 +5,10 @@
   </div>
   <form>
     <div class="form-group">
-      <input type="text" [(ngModel)]="cep" placeholder="Digite seu cep" class="form-control" [ngModelOptions]="{standalone:true}">
+      <input type="text" [(ngModel)]="cep" placeholder="Digite seu cep" class="form-control" [ngModelOptions]="{standalone:true}" maxlength="8">
     </div>
     <button class="btn btn-primary" (click)="buscaCep()">Buscar</button>
+    <br><br>
     <p *ngIf="logradouro != ''"><strong>Endereço:</strong> {{logradouro}}</p>
     <p *ngIf="bairro != ''"><strong>Bairro:</strong> {{bairro}}</p>
     <p *ngIf="localidade != ''"><strong>Cidade:</strong> {{localidade}}<span *ngIf="uf != ''"> - {{uf}}</span></p>
